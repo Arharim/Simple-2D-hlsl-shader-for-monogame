@@ -1,0 +1,2 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/makar/Documents/GitHub/Simple-2D-hlsl-shader-for-monogame/TestLighting/Content/Shaders/Lighting.fx","C:/Users/makar/Documents/GitHub/Simple-2D-hlsl-shader-for-monogame/TestLighting/Content/bin/Windows/Shaders/Lighting.xnb","EffectProcessor","CompiledEffectContent",2153,5551,0,2239547
