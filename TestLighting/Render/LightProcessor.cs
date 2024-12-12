@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using TestLighting.Lighting;
 
 namespace TestLighting.Render
@@ -15,12 +16,10 @@ namespace TestLighting.Render
 
         public List<List<Light>> SplitLightsIntoGroups(List<Light> lights)
         {
-            var groups = new List<List<Light>>();
-            for (int i = 0; i < lights.Count; i += _maxLightsPerPass)
-            {
-                groups.Add(lights.GetRange(i, Math.Min(_maxLightsPerPass, lights.Count - i)));
-            }
-            return groups;
+            return Enumerable
+                .Range(0, (int)Math.Ceiling((double)lights.Count / _maxLightsPerPass))
+                .Select(i => lights.Skip(i * _maxLightsPerPass).Take(_maxLightsPerPass).ToList())
+                .ToList();
         }
     }
 }
