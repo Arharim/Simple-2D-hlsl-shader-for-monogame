@@ -30,7 +30,7 @@ It showcases the use of **normal mapping** and custom shaders to create dynamic 
    cd Simple-2D-hlsl-shader-for-monogame
    ```
 2. Open the solution file (`.sln`) in Visual Studio or your preferred IDE.
-3. Add texture files and normal maps and build them using the monogame pipeline tool, substituting their names in the main.cs file
+3. Add texture files and normal maps and build them using the monogame pipeline tool, substituting their names in the Main.cs file
 4. Build and run the project.
 
 ## License
