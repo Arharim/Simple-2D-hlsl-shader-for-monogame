@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using TestLighting.Lighting;
 
@@ -7,50 +9,59 @@ namespace TestLighting.Input
     public class InputHandler
     {
         private readonly LightManager _lightManager;
+        private readonly Dictionary<Keys, Action> _keyActions;
 
         public InputHandler(LightManager lightManager)
         {
             _lightManager = lightManager;
+
+            _keyActions = new Dictionary<Keys, Action>
+            {
+                { Keys.Tab, () => _lightManager.SelectNextLight() },
+                { Keys.W, () => MoveSelectedLight(0, 0, 1f) },
+                { Keys.S, () => MoveSelectedLight(0, 0, -1f) },
+                { Keys.Up, () => _lightManager.UpdateSelectedLightRadius(10f) },
+                { Keys.Down, () => _lightManager.UpdateSelectedLightRadius(-10f) },
+                { Keys.Right, () => _lightManager.UpdateSelectedLightOpacity(0.1f) },
+                { Keys.Left, () => _lightManager.UpdateSelectedLightOpacity(-0.1f) }
+            };
         }
 
         public void HandleInput(MouseState mouse, KeyboardState keyboard)
         {
-            if (keyboard.IsKeyDown(Keys.Tab))
+            foreach (var keyAction in _keyActions)
             {
-                _lightManager.SelectNextLight();
+                if (keyboard.IsKeyDown(keyAction.Key))
+                    keyAction.Value.Invoke();
             }
 
-            if (mouse.LeftButton == ButtonState.Pressed)
-            {
-                _lightManager.UpdateSelectedLightPosition(
-                    new Vector3(mouse.X, mouse.Y, _lightManager.SelectedLight.Position.Z)
-                );
-            }
+            HandleMouseInput(mouse);
+        }
 
-            if (keyboard.IsKeyDown(Keys.W))
+        private void HandleMouseInput(MouseState mouse)
+        {
+            if (mouse.LeftButton == ButtonState.Pressed && _lightManager.SelectedLight != null)
             {
-                var position = _lightManager.SelectedLight.Position;
-                _lightManager.UpdateSelectedLightPosition(
-                    new Vector3(position.X, position.Y, position.Z + 1f)
-                );
+                var selectedLight = _lightManager.SelectedLight;
+                if (selectedLight.HasValue)
+                {
+                    _lightManager.UpdateSelectedLightPosition(
+                        new Vector3(mouse.X, mouse.Y, selectedLight.Value.Position.Z)
+                    );
+                }
             }
+        }
 
-            if (keyboard.IsKeyDown(Keys.S))
-            {
-                var position = _lightManager.SelectedLight.Position;
-                _lightManager.UpdateSelectedLightPosition(
-                    new Vector3(position.X, position.Y, position.Z - 1f)
-                );
-            }
+        private void MoveSelectedLight(float deltaX, float deltaY, float deltaZ)
+        {
+            var selectedLight = _lightManager.SelectedLight;
+            if (!selectedLight.HasValue)
+                return;
 
-            if (keyboard.IsKeyDown(Keys.Up))
-                _lightManager.UpdateSelectedLightRadius(10f);
-            if (keyboard.IsKeyDown(Keys.Down))
-                _lightManager.UpdateSelectedLightRadius(-10f);
-            if (keyboard.IsKeyDown(Keys.Right))
-                _lightManager.UpdateSelectedLightOpacity(0.1f);
-            if (keyboard.IsKeyDown(Keys.Left))
-                _lightManager.UpdateSelectedLightOpacity(-0.1f);
+            var position = selectedLight.Value.Position;
+            _lightManager.UpdateSelectedLightPosition(
+                new Vector3(position.X + deltaX, position.Y + deltaY, position.Z + deltaZ)
+            );
         }
     }
 }

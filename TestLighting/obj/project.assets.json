@@ -7530,9 +7530,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\SimpleLighting.csproj",
-      "projectName": "SimpleLighting",
-      "projectPath": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\SimpleLighting.csproj",
+      "projectUniqueName": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\LightingSample.csproj",
+      "projectName": "LightingSample",
+      "projectPath": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\LightingSample.csproj",
       "packagesPath": "C:\\Users\\makar\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\obj\\",
       "projectStyle": "PackageReference",

@@ -13,9 +13,9 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Shaders/Lighting.fx
+#begin Shaders/LightingPoints.fx
 /importer:EffectImporter
 /processor:EffectProcessor
 /processorParam:DebugMode=Auto
-/build:Shaders/Lighting.fx
+/build:Shaders/LightingPoints.fx
 

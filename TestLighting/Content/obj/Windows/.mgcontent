@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/makar/Documents/GitHub/Simple-2D-hlsl-shader-for-monogame/TestLighting/Content/Shaders/Lighting.fx</File>
+    <File>C:/Users/makar/Documents/GitHub/Simple-2D-hlsl-shader-for-monogame/TestLighting/Content/Shaders/LightingPoints.fx</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

@@ -35,23 +35,64 @@ namespace TestLighting
             _renderManager = new RenderManager(GraphicsDevice, _spriteBatch, _lightManager);
             _inputHandler = new InputHandler(_lightManager);
 
-            _lightManager.AddLight(
-                new Light(new Vector3(400, 300, 20), new Vector3(1.0f, 0.8f, 0.7f), 200f, 5.0f)
-            );
-            _lightManager.AddLight(
-                new Light(new Vector3(1200, 700, 20), new Vector3(0.7f, 0.8f, 1.0f), 200f, 5.0f)
-            );
+            InitializeLights();
 
             base.Initialize();
+        }
+
+        private void InitializeLights()
+        {
+            _lightManager.CreateAndAddLight(
+                new Vector3(400, 300, 20),
+                new Vector3(1.0f, 0.8f, 0.7f),
+                200f,
+                5.0f
+            );
+            _lightManager.CreateAndAddLight(
+                new Vector3(400, 300, 20),
+                new Vector3(1.0f, 0.8f, 0.7f),
+                200f,
+                5.0f
+            );
+            _lightManager.CreateAndAddLight(
+                new Vector3(400, 300, 20),
+                new Vector3(1.0f, 0.8f, 0.7f),
+                200f,
+                5.0f
+            );
+            _lightManager.CreateAndAddLight(
+                new Vector3(400, 300, 20),
+                new Vector3(1.0f, 0.8f, 0.7f),
+                200f,
+                5.0f
+            );
+            _lightManager.CreateAndAddLight(
+                new Vector3(400, 300, 20),
+                new Vector3(1.0f, 0.8f, 0.7f),
+                200f,
+                5.0f
+            );
+            _lightManager.CreateAndAddLight(
+                new Vector3(1200, 700, 20),
+                new Vector3(0.7f, 0.8f, 1.0f),
+                200f,
+                5.0f
+            );
+            _lightManager.CreateAndAddLight(
+                new Vector3(1200, 700, 20),
+                new Vector3(0.7f, 0.8f, 1.0f),
+                200f,
+                5.0f
+            );
         }
 
         protected override void LoadContent()
         {
             _renderManager.LoadContent(
                 Content,
-                "Textures/Your_texture_name",
-                "Textures/Your_texture_name_normalmap",
-                "Shaders/Lighting2"
+                "Textures/YOUR_TEXTURE_NAME",
+                "Textures/YOUR_TEXTURE_NAME_NORMALMAP",
+                "Shaders/LightingPoints"
             );
         }
 
