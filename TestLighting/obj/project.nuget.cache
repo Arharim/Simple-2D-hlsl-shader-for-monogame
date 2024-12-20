@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vt1hqXcZIJn2/8qmQAlJ//XHqOp9kxLbfZjzKsMl3cYSpqU0NFlzO44godzQMQpDsXSXlFCWl+PTrVEKkvzJpQ==",
+  "dgSpecHash": "ljEBSCnNCxJeDln57iI2GvYYCJvJnLgYdfZfXFYBxo/AikQej0lrJr8vPPzKT3+qO6YQDVXQOFA4kq+fCgcYiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\LightingSample.csproj",
+  "projectFilePath": "Z:\\c_n_cpp_projects\\Lightong_bu\\TestLighting\\LightingSample.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\makar\\.nuget\\packages\\libuv\\1.9.1\\libuv.1.9.1.nupkg.sha512",
     "C:\\Users\\makar\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\1.1.0\\microsoft.codeanalysis.analyzers.1.1.0.nupkg.sha512",

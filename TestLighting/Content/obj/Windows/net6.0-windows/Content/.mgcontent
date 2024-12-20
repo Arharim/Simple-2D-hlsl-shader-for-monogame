@@ -4,9 +4,33 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/makar/Documents/GitHub/Simple-2D-hlsl-shader-for-monogame/TestLighting/Content/Shaders/LightingPoints.fx</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Shaders/LightingPoints.fx</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Shaders/LightingSpots.fx</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/cell_normal.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/cell.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/HOUSE_NORMALMAP_KRITA.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/HOUSE_NORMALMAP_PS.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/HOUSE.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/ROCKS_NORMALMAP_KRITA.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/ROCKS_NORMALMAP_PS.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/ROCKS.png</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/WALL_NORMALMAP_KRITA.jpg</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/WALL_NORMALMAP_PS.jpg</File>
+    <File>Z:/c_n_cpp_projects/Lightong_bu/TestLighting/Content/Textures/WALL.jpg</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

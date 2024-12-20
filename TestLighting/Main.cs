@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+﻿using LightningSample.Input;
+using LightningSample.Lighting;
+using LightningSample.Render;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using TestLighting.Input;
-using TestLighting.Lighting;
-using TestLighting.Render;
 
-namespace TestLighting
+namespace LightningSample
 {
     public class Main : Game
     {
@@ -54,35 +54,24 @@ namespace TestLighting
                 200f,
                 5.0f
             );
-            _lightManager.CreateAndAddLight(
-                new Vector3(400, 300, 20),
-                new Vector3(1.0f, 0.8f, 0.7f),
-                200f,
-                5.0f
+            _lightManager.CreateAndAddSpotLight(
+                new Vector3(600, 400, 20),
+                new Vector3(-1, 0, 0),
+                new Vector3(0.9f, 0.7f, 0.3f),
+                300f,
+                0.8f,
+                MathHelper.ToRadians(15),
+                MathHelper.ToRadians(30)
             );
-            _lightManager.CreateAndAddLight(
-                new Vector3(400, 300, 20),
-                new Vector3(1.0f, 0.8f, 0.7f),
-                200f,
-                5.0f
-            );
-            _lightManager.CreateAndAddLight(
-                new Vector3(400, 300, 20),
-                new Vector3(1.0f, 0.8f, 0.7f),
-                200f,
-                5.0f
-            );
-            _lightManager.CreateAndAddLight(
-                new Vector3(1200, 700, 20),
-                new Vector3(0.7f, 0.8f, 1.0f),
-                200f,
-                5.0f
-            );
-            _lightManager.CreateAndAddLight(
-                new Vector3(1200, 700, 20),
-                new Vector3(0.7f, 0.8f, 1.0f),
-                200f,
-                5.0f
+
+            _lightManager.CreateAndAddSpotLight(
+                new Vector3(1000, 600, 20),
+                new Vector3(1, 0, 0),
+                new Vector3(0.3f, 0.7f, 0.9f),
+                300f,
+                0.8f,
+                MathHelper.ToRadians(20),
+                MathHelper.ToRadians(40)
             );
         }
 
@@ -90,9 +79,10 @@ namespace TestLighting
         {
             _renderManager.LoadContent(
                 Content,
-                "Textures/YOUR_TEXTURE_NAME",
-                "Textures/YOUR_TEXTURE_NAME_NORMALMAP",
-                "Shaders/LightingPoints"
+                "Textures/cell",
+                "Textures/cell_normal",
+                "Shaders/LightingPoints",
+                "Shaders/LightingSpots"
             );
         }
 

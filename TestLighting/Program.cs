@@ -1,3 +1,3 @@
 ﻿
-using var game = new TestLighting.Main();
+using var game = new LightningSample.Main();
 game.Run();

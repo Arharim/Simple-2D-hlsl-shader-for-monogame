@@ -7530,11 +7530,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\LightingSample.csproj",
+      "projectUniqueName": "Z:\\c_n_cpp_projects\\Lightong_bu\\TestLighting\\LightingSample.csproj",
       "projectName": "LightingSample",
-      "projectPath": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\LightingSample.csproj",
+      "projectPath": "Z:\\c_n_cpp_projects\\Lightong_bu\\TestLighting\\LightingSample.csproj",
       "packagesPath": "C:\\Users\\makar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\makar\\Documents\\GitHub\\Simple-2D-hlsl-shader-for-monogame\\TestLighting\\obj\\",
+      "outputPath": "Z:\\c_n_cpp_projects\\Lightong_bu\\TestLighting\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
