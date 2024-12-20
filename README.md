@@ -6,20 +6,29 @@ It showcases the use of **normal mapping** and custom shaders to create dynamic 
 
 ## Features
 
-- **Dynamic Lighting**: Multiple light sources with adjustable position, radius, color, and opacity.
+- **Dynamic Lighting**: 
+  - Multiple light sources, including **point lights** and **spotlights**.
+  - Adjustable position, radius, color, opacity, and direction for spotlights.
+- **Spotlights**: 
+  - Support for inner and outer cone angles, enabling realistic light falloff.
+  - Independent configuration of direction and spread angle.
 - **Normal Mapping**: Adds realistic depth and lighting effects to flat 2D textures using normal maps.
-- **Custom Shaders**: Utilizes HLSL shaders for lighting calculations.
-- **Interactive Controls**: 
+- **Custom Shaders**: Utilizes HLSL shaders for point lights and spotlights, allowing advanced lighting calculations.
+- **Interactive Controls**:
   - Use the mouse and keyboard to move lights, adjust their properties, or switch between active light sources.
-  - Fine-tune light properties (radius, opacity, etc.) in real time.
-- **Modular Design**: 
-  - Light management, rendering, and input handling are encapsulated in separate classes, promoting clean and maintainable code.
+  - Fine-tune light properties (radius, opacity, cone angles, etc.) in real time.
+- **Modular Design**:
+  - Separate managers for light management, shader preparation, and rendering.
+  - Promotes clean and maintainable code by dividing responsibilities between specialized classes.
 
 ## Controls
 
-- **TAB**: Cycle through the available light sources.
+- **TAB**: Cycle through the available point light sources.
+- **P**: Cycle through the available spot light sources.
+- **Space**: Toggle current light mode.
 - **Mouse Left Click**: Move the selected light source to the mouse position.
 - **W / S**: Move the selected light source along the Z-axis (depth).
+- **Q / E**: Update the selected spot light source angle.
 - **Arrow Keys**: Adjust the radius and opacity of the selected light source.
 
 ## How to Run
